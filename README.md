@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ```
 
 ```bash
-dwave setup --oob
+dwave setup --auth
 ```
 
 ## Usage
