@@ -33,7 +33,7 @@ dwave setup --oob
 
 Clone the repo. If you are cloning the repo to your local system, working in a
 [virtual environment](https://docs.python.org/3/library/venv.html) is
-recommended. Python 3.9 to 3.13 versions are supported.
+recommended. Python 3.10 to 3.13 versions are supported.
 
 For development environments that do not support `devcontainers`, install
 requirements:
@@ -78,6 +78,17 @@ See cited papers to understand details of the experiment.
 * Construct mapping(s) from the problem to the solver (embedding)
 * Submit QPU instructions varying by fast-anneal time collecting data
 * Plot the data
+
+## Related Demos
+
+Interactive Dash applications covering the same physics:
+
+* [Adiabatic Quantum Computation with Landau-Zener Scaling](https://github.com/dwave-examples/adiabatic-quantum-computation):
+  uses the fast-anneal protocol to find ground states of frustrated 16-variable
+  Ising models, with gap-dependent scaling given by the Landau-Zener formula.
+* [Kibble-Zurek](https://github.com/dwave-examples/kibble-zurek): demonstrates
+  kink-density scaling in the regime with high rates of excitation away from the
+  ground state.
 
 ## References
 

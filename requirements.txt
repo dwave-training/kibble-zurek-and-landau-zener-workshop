@@ -1,7 +1,6 @@
-# dwave-ocean-sdk>=8.3.0  # To do, update with inclusion of ParallelEmbeddingComposite and pointing to latest version of dwave-networkx
-minorminer>=0.2.19
-dwave-system>=1.32.0
-dwave-networkx>=0.8.18
+minorminer>=0.2.22
+dwave-system>=1.36.0
+dwave-graphs>=1.0.0
 
 matplotlib
 notebook
