@@ -30,7 +30,7 @@ from minorminer.utils.parallel_embeddings import find_multiple_embeddings
 from dwave.preprocessing.composites import SpinReversalTransformComposite
 import dwave.system
 from dwave.samplers import TreeDecompositionSolver
-from dwave_networkx import draw_parallel_embeddings
+from dwave.graphs import draw_parallel_embeddings
 
 
 def get_model(model="Landau-Zener", model_idx=0):
@@ -91,7 +91,7 @@ def main(
         answer_mode="raw",
         fast_anneal=True,
         auto_scale=False,
-        label="AQC2025 Workshop",
+        label="Kibble-Zurek and Landau-Zener Workshop",
     )
     target_graph = qpu.to_networkx_graph()
 
@@ -128,7 +128,7 @@ def main(
         embeddings=embeddings,
         S=nx.from_edgelist(J.keys()),
         one_to_iterable=False,
-    )  # There are many different dwave_networkx visualization tools suiting other purposes.
+    )  # There are many different dwave.graphs visualization tools suiting other purposes.
     print("Embedding time (seconds):", perf_counter() - time0)
     fname = f"{model}_embeddings_{solver}.png"
     plt.savefig(fname, bbox_inches="tight")
@@ -195,7 +195,7 @@ if __name__ == "__main__":
     tas_nanosec = [5, 7, 10, 14, 20]  # Larger values can show thermal deviation
 
     parser = argparse.ArgumentParser(
-        description="AQC2025 workshop (ocean-sdk for physics)"
+        description="Kibble-Zurek and Landau-Zener workshop (ocean-sdk for physics)"
     )
 
     parser.add_argument(
